@@ -2,6 +2,16 @@
 # repo: owner/name · kind: project | experiment
 # blurb: optional {en, pt} — for projects lead with the problem, then stack and outcome.
 # description: optional fallback when the GitHub API can't be reached.
-- repo: gohugoio/hugo # TODO owner: placeholder, replace with your own repos
-  kind: experiment
-  description: The world's fastest framework for building websites.
+- {repo: teoria/airflow-embedash, kind: project}
+- {repo: teoria/dbt-iceberg-utils, kind: project}
+- {repo: teoria/iceduck, kind: project}
+- {repo: teoria/treinamento-dbt-trino, kind: project}
+- {repo: teoria/nyc_taxi_spark_streaming, kind: project}
+- {repo: teoria/supletivo-nifi-DH, kind: project}
+- {repo: teoria/chronos_2_llm, kind: experiment}
+- {repo: teoria/quacklake, kind: experiment}
+- {repo: teoria/duckdb_heavy_joins, kind: experiment}
+- {repo: teoria/vlm_pdf_parser, kind: experiment}
+- {repo: teoria/dbt_dedup_iceberg_macro, kind: experiment}
+- {repo: teoria/duckdb_udf, kind: experiment}
+- {repo: teoria/crewai-lgpd-specialist, kind: experiment}
