@@ -19,4 +19,17 @@ has cv/index.html     'Universidade de Pernambuco'
 has index.html        'Download CV'
 has index.html        'Rodrigo Carneiro'
 lacks . 'gmail|midiaseducativas|teoria@'
+
+# Posts (drafts are fixtures)
+has index.html                  'posts/example/'
+has posts/example/index.html    'linkedin.com/posts'
+has pt/posts/example/index.html '<html lang="?pt'
+has posts/only-en/index.html    'Only in English'
+has posts/only-en/index.html    'href="?/pt/"?'
+has posts/index.html            'posts/example/'
+
+# Empty state: no drafts
+build
+has index.html    'No posts yet'
+has pt/index.html 'Nenhuma publicação ainda'
 echo OK

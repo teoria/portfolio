@@ -1,6 +1,15 @@
 {{ define "main" }}
 <div class="home">
   {{ partial "sidebar.html" . }}
-  <section class="feed"></section>
+  <section class="feed">
+    <h2 class="label">{{ i18n "latest_posts" }}</h2>
+    {{- $posts := where site.RegularPages "Section" "posts" }}
+    <div class="stack">
+      {{- range first 5 $posts.ByDate.Reverse }}{{ partial "post-card.html" . }}{{ else }}<p class="muted">{{ i18n "no_posts" }}</p>{{ end }}
+    </div>
+    {{- if gt (len $posts) 5 }}
+    <p><a href="{{ "posts/" | relLangURL }}">{{ i18n "see_all_posts" }} →</a></p>
+    {{- end }}
+  </section>
 </div>
 {{ end }}

@@ -1,0 +1,5 @@
+<article class="card post-card">
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  <p class="muted">{{ with .Params.teaser }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 140 }}{{ end }}</p>
+  <time class="date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_medium" }}</time>
+</article>

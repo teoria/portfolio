@@ -56,3 +56,12 @@ main.wrap { padding-top: 28px; padding-bottom: 48px; }
   .card { border: 0; padding: 0; }
   a { text-decoration: none; }
 }
+
+.feed .label { margin-top: 0; }
+.stack { display: grid; gap: 12px; }
+.post-card h3 { margin: 0 0 4px; font-size: 17px; }
+.post-card h3 a { text-decoration: none; }
+.post-card p { margin: 0 0 6px; }
+.date { font-size: 13px; color: var(--faint); }
+.prose { max-width: 720px; }
+.prose h1 { margin-top: 0; }

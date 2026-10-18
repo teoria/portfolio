@@ -1,0 +1,6 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<div class="stack">
+  {{- range .Pages.ByDate.Reverse }}{{ partial "post-card.html" . }}{{ else }}<p class="muted">{{ i18n "no_posts" }}</p>{{ end }}
+</div>
+{{ end }}
