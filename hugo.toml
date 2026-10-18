@@ -1,0 +1,52 @@
+baseURL = "https://rodrigocarneiro.com/"
+title = "Rodrigo Carneiro"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+disableKinds = ["taxonomy", "term", "RSS"]
+
+[params]
+linkedin = "https://www.linkedin.com/in/rodrigoteoria"
+github = "https://github.com/OWNER" # TODO owner: real GitHub URL
+
+[security.funcs]
+getenv = ["^HUGO_", "^CI$", "^GITHUB_"]
+
+[languages.en]
+languageName = "EN"
+weight = 1
+[[languages.en.menus.main]]
+name = "Posts"
+pageRef = "/posts"
+weight = 1
+[[languages.en.menus.main]]
+name = "Projects"
+pageRef = "/projects"
+weight = 2
+[[languages.en.menus.main]]
+name = "Experiments"
+pageRef = "/experiments"
+weight = 3
+[[languages.en.menus.main]]
+name = "CV"
+pageRef = "/cv"
+weight = 4
+
+[languages.pt]
+languageName = "PT"
+weight = 2
+[[languages.pt.menus.main]]
+name = "Posts"
+pageRef = "/posts"
+weight = 1
+[[languages.pt.menus.main]]
+name = "Projetos"
+pageRef = "/projects"
+weight = 2
+[[languages.pt.menus.main]]
+name = "Experimentos"
+pageRef = "/experiments"
+weight = 3
+[[languages.pt.menus.main]]
+name = "Currículo"
+pageRef = "/cv"
+weight = 4

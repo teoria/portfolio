@@ -1,0 +1,17 @@
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+    <nav>
+      {{- range site.Menus.main }}
+      <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{- end }}
+      {{- /* Switch to this page's translation; fall back to the other language's home. */}}
+      {{- range site.Home.Translations }}
+        {{- $lang := .Language.Lang }}
+        {{- $target := . }}
+        {{- range $.Translations }}{{ if eq .Language.Lang $lang }}{{ $target = . }}{{ end }}{{ end }}
+      <a class="lang" href="{{ $target.RelPermalink }}" hreflang="{{ $lang }}" lang="{{ $lang }}">{{ .Language.LanguageName }}</a>
+      {{- end }}
+    </nav>
+  </div>
+</header>
