@@ -1,0 +1,50 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.159.0"
+          extended: true
+      - uses: browser-actions/setup-chrome@v1
+        id: chrome
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - name: Test
+        run: bash scripts/check.sh
+        env:
+          CHROME: ${{ steps.chrome.outputs.chrome-path }}
+      - name: Build
+        run: bash scripts/build.sh
+        env:
+          CHROME: ${{ steps.chrome.outputs.chrome-path }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

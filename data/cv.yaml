@@ -34,23 +34,37 @@ experience:
     end: "2026-03"
     location: {en: "São Paulo, Brazil", pt: "São Paulo, Brasil"}
     bullets:
-      en: [Data platforms and MLOps.]
-      pt: [Plataformas de dados e MLOps.]
+      en:
+        - "Data platforms and MLOps."
+      pt:
+        - "Plataformas de dados e MLOps."
   - company: Incognia
     role: Data Engineer
     start: "2022-08"
     end: "2023-03"
     bullets:
-      en: [Core data engineering and team technical development., Architected data pipelines., MLOps, data quality and data governance.]
-      pt: [Engenharia de dados core e desenvolvimento técnico do time., Arquitetura de pipelines de dados., MLOps, qualidade e governança de dados.]
+      en:
+        - "Core data engineering and team technical development."
+        - "Architected data pipelines."
+        - "MLOps, data quality and data governance."
+      pt:
+        - "Engenharia de dados core e desenvolvimento técnico do time."
+        - "Arquitetura de pipelines de dados."
+        - "MLOps, qualidade e governança de dados."
     tech: [Kubernetes, Kafka, Spark, dbt, Redash, Python, Scala]
   - company: Passei Direto
     role: Staff Data Engineer
     start: "2022-02"
     end: "2022-07"
     bullets:
-      en: [Tech lead and team technical development., Architected data pipelines from databases and external APIs., Data quality and data governance.]
-      pt: [Tech lead e desenvolvimento técnico do time., Arquitetura de pipelines de dados a partir de bancos e APIs externas., Qualidade e governança de dados.]
+      en:
+        - "Tech lead and team technical development."
+        - "Architected data pipelines from databases and external APIs."
+        - "Data quality and data governance."
+      pt:
+        - "Tech lead e desenvolvimento técnico do time."
+        - "Arquitetura de pipelines de dados a partir de bancos e APIs externas."
+        - "Qualidade e governança de dados."
     tech: [AWS (EC2, ECS, EMR, DMS, MWAA), Python, R]
   - company: TKSolution
     role: Big Data Specialist
@@ -58,16 +72,24 @@ experience:
     end: "2022-01"
     location: {en: "Florianópolis, Brazil", pt: "Florianópolis, Brasil"}
     bullets:
-      en: [Tech lead and team technical development., Architected data pipelines from databases and external APIs., Data quality and data governance.]
-      pt: [Tech lead e desenvolvimento técnico do time., Arquitetura de pipelines de dados a partir de bancos e APIs externas., Qualidade e governança de dados.]
+      en:
+        - "Tech lead and team technical development."
+        - "Architected data pipelines from databases and external APIs."
+        - "Data quality and data governance."
+      pt:
+        - "Tech lead e desenvolvimento técnico do time."
+        - "Arquitetura de pipelines de dados a partir de bancos e APIs externas."
+        - "Qualidade e governança de dados."
     tech: [Prefect, Python, dbt, Snowflake, Oracle]
   - company: Universidade de Pernambuco
     role: Researcher · Data Specialist
     start: "2020-12"
     location: {en: "Recife, Brazil", pt: "Recife, Brasil"}
     bullets:
-      en: [Design and implementation of solutions combining data integration, data engineering, data science and AI to support decision making and continuous improvement.]
-      pt: [Projeto e implementação de soluções que combinam integração de dados, engenharia de dados, ciência de dados e IA para apoiar a tomada de decisão e a melhoria contínua.]
+      en:
+        - "Design and implementation of solutions combining data integration, data engineering, data science and AI to support decision making and continuous improvement."
+      pt:
+        - "Projeto e implementação de soluções que combinam integração de dados, engenharia de dados, ciência de dados e IA para apoiar a tomada de decisão e a melhoria contínua."
     tech: [Airflow, Kafka, NiFi, Spark, Postgres, Athena, MongoDB, TimescaleDB, R, Python, Django, Grafana, Metabase]
   - company: LeanCompliance
     role: {en: Co-Founder & Software Engineer, pt: Cofundador e Engenheiro de Software}
@@ -78,8 +100,10 @@ experience:
     start: "2019-01"
     end: "2021-01"
     bullets:
-      en: [Neuro-marketing AI models that predicted a campaign's effectiveness before launch, then segmented the audience after launch to guide strategy.]
-      pt: [Modelos de IA de neuromarketing que previam a eficácia de uma campanha antes da publicação e, depois, segmentavam o público para orientar a estratégia.]
+      en:
+        - "Neuro-marketing AI models that predicted a campaign's effectiveness before launch, then segmented the audience after launch to guide strategy."
+      pt:
+        - "Modelos de IA de neuromarketing que previam a eficácia de uma campanha antes da publicação e, depois, segmentavam o público para orientar a estratégia."
     tech: [React, Flask, Python, MongoDB]
   - company: Ahgora Sistemas
     role: {en: Data Scientist, pt: Cientista de Dados}
@@ -87,8 +111,14 @@ experience:
     end: "2021-08"
     location: {en: "Florianópolis, Brazil", pt: "Florianópolis, Brasil"}
     bullets:
-      en: [Architected a data lake and new data products as microservices., Built data pipelines and served an analytics API., Data literacy and people analytics.]
-      pt: [Arquitetura de um data lake e de novos produtos de dados como microsserviços., Construção de pipelines de dados e de uma API de analytics., Data literacy e people analytics.]
+      en:
+        - "Architected a data lake and new data products as microservices."
+        - "Built data pipelines and served an analytics API."
+        - "Data literacy and people analytics."
+      pt:
+        - "Arquitetura de um data lake e de novos produtos de dados como microsserviços."
+        - "Construção de pipelines de dados e de uma API de analytics."
+        - "Data literacy e people analytics."
     tech: [Python, R, Node.js, PHP, MongoDB, Postgres, Redis, Neo4j, Elasticsearch, Kafka, AWS, OpenShift, Metabase, Grafana]
 
 earlier_career:
