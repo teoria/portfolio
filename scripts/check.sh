@@ -32,4 +32,11 @@ has posts/index.html            'posts/example/'
 build
 has index.html    'No posts yet'
 has pt/index.html 'Nenhuma publicação ainda'
+
+# Repos, offline (API unavailable must not break the build)
+GITHUB_FETCH=false build
+has projects/index.html       'No projects yet'
+has experiments/index.html    'gohugoio/hugo'
+has experiments/index.html    'class="card repo-card'
+has pt/experiments/index.html 'Experimentos'
 echo OK

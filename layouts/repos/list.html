@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{- $kind := .Params.kind }}
+<h1>{{ .Title }}</h1>
+<div class="grid">
+  {{- range where hugo.Data.repos "kind" $kind }}{{ partial "repo-card.html" . }}{{ else }}<p class="muted">{{ i18n (printf "no_%ss" $kind) }}</p>{{ end }}
+</div>
+{{ end }}

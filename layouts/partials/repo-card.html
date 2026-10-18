@@ -1,0 +1,20 @@
+{{- /* Repo from data/repos.yaml, enriched from the GitHub API unless GITHUB_FETCH=false.
+       Any fetch failure falls back to the YAML fields so the build never breaks. */ -}}
+{{- $lang := site.Language.Lang }}
+{{- $gh := dict }}
+{{- if ne (getenv "GITHUB_FETCH") "false" }}
+  {{- $headers := dict "Accept" "application/vnd.github+json" }}
+  {{- with getenv "GITHUB_TOKEN" }}{{ $headers = merge $headers (dict "Authorization" (printf "Bearer %s" .)) }}{{ end }}
+  {{- with try (resources.GetRemote (printf "https://api.github.com/repos/%s" .repo) (dict "headers" $headers)) }}
+    {{- with .Err }}{{ warnf "repo-card: %s" . }}{{ else with .Value }}{{ $gh = . | transform.Unmarshal }}{{ end }}
+  {{- end }}
+{{- end }}
+{{- $desc := or (partial "t.html" (dict "v" .blurb "lang" $lang)) $gh.description .description }}
+<article class="card repo-card">
+  <h3><a href="https://github.com/{{ .repo }}">{{ .repo }}</a></h3>
+  {{- with $desc }}<p>{{ . }}</p>{{ end }}
+  <p class="date">
+    {{- with $gh.language }}<span class="tag">{{ . }}</span> {{ end }}
+    {{- with $gh.pushed_at }}{{ i18n "updated" }} {{ time.Format "Jan 2006" (time.AsTime .) }}{{ end -}}
+  </p>
+</article>

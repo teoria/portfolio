@@ -1,0 +1,7 @@
+# Hand-picked GitHub repos shown on /projects and /experiments.
+# repo: owner/name · kind: project | experiment
+# blurb: optional {en, pt} — for projects lead with the problem, then stack and outcome.
+# description: optional fallback when the GitHub API can't be reached.
+- repo: gohugoio/hugo # TODO owner: placeholder, replace with your own repos
+  kind: experiment
+  description: The world's fastest framework for building websites.
