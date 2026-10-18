@@ -1,0 +1,21 @@
+{{- $cv := hugo.Data.cv }}
+{{- $lang := site.Language.Lang }}
+<aside class="card sidebar">
+  {{- with resources.Get "img/photo.jpg" }}
+  <img class="avatar" src="{{ (.Fill "160x160").RelPermalink }}" alt="{{ $cv.name }}" width="80" height="80">
+  {{- else }}
+  <div class="avatar" aria-hidden="true">RC</div>
+  {{- end }}
+  <h1 class="name">{{ $cv.name }}</h1>
+  <p class="headline">{{ partial "t.html" (dict "v" $cv.headline "lang" $lang) }}</p>
+  <h2 class="label">{{ i18n "experience" }}</h2>
+  <ul class="plain">
+    {{- range first 3 (sort $cv.experience "start" "desc") }}
+    <li><strong>{{ .company }}</strong><br><span class="muted">{{ partial "t.html" (dict "v" .role "lang" $lang) }}</span></li>
+    {{- end }}
+  </ul>
+  <h2 class="label">{{ i18n "stack" }}</h2>
+  <p class="tags">{{ range $cv.stack }}<span class="tag">{{ . }}</span>{{ end }}</p>
+  <a class="button" href="{{ "cv.pdf" | relLangURL }}">{{ i18n "download_cv" }}</a>
+  <p class="links"><a href="{{ site.Params.linkedin }}">LinkedIn</a> · <a href="{{ site.Params.github }}">GitHub</a></p>
+</aside>

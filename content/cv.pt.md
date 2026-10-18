@@ -1,0 +1,4 @@
+---
+title: Currículo
+type: cv
+---

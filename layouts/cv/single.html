@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{- $cv := hugo.Data.cv }}
+{{- $lang := site.Language.Lang }}
+<article class="cv card">
+  <header class="cv-head">
+    <div>
+      <h1>{{ $cv.name }}</h1>
+      <p class="headline">{{ partial "t.html" (dict "v" $cv.headline "lang" $lang) }}</p>
+      <p class="muted">{{ partial "t.html" (dict "v" $cv.location "lang" $lang) }} · <a href="{{ site.Params.linkedin }}">LinkedIn</a> · <a href="{{ site.Params.github }}">GitHub</a></p>
+    </div>
+    <a class="button no-print" href="{{ "cv.pdf" | relLangURL }}">{{ i18n "download_cv" }}</a>
+  </header>
+
+  <section>
+    <h2>{{ i18n "summary" }}</h2>
+    <p>{{ partial "t.html" (dict "v" $cv.summary "lang" $lang) }}</p>
+    <p class="tags">{{ range $cv.stack }}<span class="tag">{{ . }}</span>{{ end }}</p>
+  </section>
+
+  <section>
+    <h2>{{ i18n "experience" }}</h2>
+    {{- range sort $cv.experience "start" "desc" }}
+    <div class="job">
+      <h3>{{ partial "t.html" (dict "v" .role "lang" $lang) }} · {{ .company }}</h3>
+      <p class="muted">{{ partial "when.html" .start }} – {{ partial "when.html" .end }}{{ with .location }} · {{ partial "t.html" (dict "v" . "lang" $lang) }}{{ end }}</p>
+      {{- with .bullets }}
+      <ul>{{ range index . $lang }}<li>{{ . }}</li>{{ end }}</ul>
+      {{- end }}
+      {{- with .tech }}<p class="tech">{{ delimit . ", " }}</p>{{ end }}
+    </div>
+    {{- end }}
+  </section>
+
+  <section>
+    <h2>{{ i18n "earlier_career" }}</h2>
+    <p>{{ partial "t.html" (dict "v" $cv.earlier_career "lang" $lang) }}</p>
+  </section>
+
+  <section>
+    <h2>{{ i18n "education" }}</h2>
+    {{- range $cv.education }}
+    <div class="job">
+      <h3>{{ partial "t.html" (dict "v" .degree "lang" $lang) }}</h3>
+      <p class="muted">{{ .school }} · {{ .years }}</p>
+    </div>
+    {{- end }}
+  </section>
+
+  <div class="cv-cols">
+    <section>
+      <h2>{{ i18n "certifications" }}</h2>
+      <ul>{{ range $cv.certifications }}<li>{{ . }}</li>{{ end }}</ul>
+      <h2>{{ i18n "languages" }}</h2>
+      <ul>{{ range $cv.languages }}<li>{{ partial "t.html" (dict "v" .name "lang" $lang) }} — {{ partial "t.html" (dict "v" .level "lang" $lang) }}</li>{{ end }}</ul>
+    </section>
+    <section>
+      <h2>{{ i18n "awards" }}</h2>
+      <ul>{{ range $cv.awards }}<li>{{ partial "t.html" (dict "v" . "lang" $lang) }}</li>{{ end }}</ul>
+      <h2>{{ i18n "publications" }}</h2>
+      <ul>{{ range $cv.publications }}<li>{{ . }}</li>{{ end }}</ul>
+    </section>
+  </div>
+</article>
+{{ end }}

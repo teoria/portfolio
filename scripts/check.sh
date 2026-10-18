@@ -10,4 +10,13 @@ has index.html     '<html lang="?en'
 has pt/index.html  '<html lang="?pt'
 has index.html     'href="?/pt/'
 has CNAME          '^rodrigocarneiro.com$'
+
+# CV
+has cv/index.html     'Serasa Experian'
+has cv/index.html     'Earlier career'
+has pt/cv/index.html  'Carreira anterior'
+has cv/index.html     'Universidade de Pernambuco'
+has index.html        'Download CV'
+has index.html        'Rodrigo Carneiro'
+lacks . 'gmail|midiaseducativas|teoria@'
 echo OK

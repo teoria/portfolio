@@ -1,0 +1,4 @@
+{{- /* "2026-03" → localized "Mar 2026"; empty → "Present". */ -}}
+{{- $s := i18n "present" }}
+{{- with . }}{{ $s = time.Format "Jan 2006" (time.AsTime (printf "%s-01" .)) }}{{ end }}
+{{- return $s -}}

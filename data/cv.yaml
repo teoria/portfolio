@@ -1,0 +1,142 @@
+# One-time conversion of the LinkedIn "Save to PDF" profile (2026-10-18).
+# Maintain by hand. Bilingual fields are either a plain string or {en, pt}.
+name: Rodrigo Carneiro
+headline:
+  en: Data Engineer · Data Platforms, MLOps & Data Governance
+  pt: Engenheiro de Dados · Plataformas de Dados, MLOps e Governança de Dados
+location:
+  en: Pernambuco, Brazil
+  pt: Pernambuco, Brasil
+summary:
+  en: >-
+    Data engineer with 20 years in software and 10+ years building data platforms,
+    pipelines and machine learning systems. I design data integration, lakehouse
+    and MLOps solutions that teams trust for decision making, with a focus on
+    data quality and governance. Former Staff Data Engineer and tech lead;
+    MSc in Computational Intelligence (UPE) and Data Science specialization
+    (Johns Hopkins).
+  pt: >-
+    Engenheiro de dados com 20 anos em software e mais de 10 anos construindo
+    plataformas de dados, pipelines e sistemas de machine learning. Projeto
+    soluções de integração de dados, lakehouse e MLOps em que os times confiam
+    para tomar decisões, com foco em qualidade e governança de dados. Já atuei
+    como Staff Data Engineer e tech lead; mestre em Computação Inteligente (UPE)
+    e especialista em Data Science (Johns Hopkins).
+stack: [Airflow, dbt, Spark, Kafka, Athena, Redshift, Snowflake, Postgres, Python, AWS, Kubernetes, MLOps]
+
+experience:
+  - company: Filterbuy
+    role: Data Specialist
+    start: "2026-03"
+  - company: Serasa Experian
+    role: Data Specialist
+    start: "2023-06"
+    end: "2026-03"
+    location: {en: "São Paulo, Brazil", pt: "São Paulo, Brasil"}
+    bullets:
+      en: [Data platforms and MLOps.]
+      pt: [Plataformas de dados e MLOps.]
+  - company: Incognia
+    role: Data Engineer
+    start: "2022-08"
+    end: "2023-03"
+    bullets:
+      en: [Core data engineering and team technical development., Architected data pipelines., MLOps, data quality and data governance.]
+      pt: [Engenharia de dados core e desenvolvimento técnico do time., Arquitetura de pipelines de dados., MLOps, qualidade e governança de dados.]
+    tech: [Kubernetes, Kafka, Spark, dbt, Redash, Python, Scala]
+  - company: Passei Direto
+    role: Staff Data Engineer
+    start: "2022-02"
+    end: "2022-07"
+    bullets:
+      en: [Tech lead and team technical development., Architected data pipelines from databases and external APIs., Data quality and data governance.]
+      pt: [Tech lead e desenvolvimento técnico do time., Arquitetura de pipelines de dados a partir de bancos e APIs externas., Qualidade e governança de dados.]
+    tech: [AWS (EC2, ECS, EMR, DMS, MWAA), Python, R]
+  - company: TKSolution
+    role: Big Data Specialist
+    start: "2021-08"
+    end: "2022-01"
+    location: {en: "Florianópolis, Brazil", pt: "Florianópolis, Brasil"}
+    bullets:
+      en: [Tech lead and team technical development., Architected data pipelines from databases and external APIs., Data quality and data governance.]
+      pt: [Tech lead e desenvolvimento técnico do time., Arquitetura de pipelines de dados a partir de bancos e APIs externas., Qualidade e governança de dados.]
+    tech: [Prefect, Python, dbt, Snowflake, Oracle]
+  - company: Universidade de Pernambuco
+    role: Researcher · Data Specialist
+    start: "2020-12"
+    location: {en: "Recife, Brazil", pt: "Recife, Brasil"}
+    bullets:
+      en: [Design and implementation of solutions combining data integration, data engineering, data science and AI to support decision making and continuous improvement.]
+      pt: [Projeto e implementação de soluções que combinam integração de dados, engenharia de dados, ciência de dados e IA para apoiar a tomada de decisão e a melhoria contínua.]
+    tech: [Airflow, Kafka, NiFi, Spark, Postgres, Athena, MongoDB, TimescaleDB, R, Python, Django, Grafana, Metabase]
+  - company: LeanCompliance
+    role: {en: Co-Founder & Software Engineer, pt: Cofundador e Engenheiro de Software}
+    start: "2019-07"
+    end: "2022-03"
+  - company: Deeep Marketing
+    role: {en: Co-Founder & Data Engineer, pt: Cofundador e Engenheiro de Dados}
+    start: "2019-01"
+    end: "2021-01"
+    bullets:
+      en: [Neuro-marketing AI models that predicted a campaign's effectiveness before launch, then segmented the audience after launch to guide strategy.]
+      pt: [Modelos de IA de neuromarketing que previam a eficácia de uma campanha antes da publicação e, depois, segmentavam o público para orientar a estratégia.]
+    tech: [React, Flask, Python, MongoDB]
+  - company: Ahgora Sistemas
+    role: {en: Data Scientist, pt: Cientista de Dados}
+    start: "2017-09"
+    end: "2021-08"
+    location: {en: "Florianópolis, Brazil", pt: "Florianópolis, Brasil"}
+    bullets:
+      en: [Architected a data lake and new data products as microservices., Built data pipelines and served an analytics API., Data literacy and people analytics.]
+      pt: [Arquitetura de um data lake e de novos produtos de dados como microsserviços., Construção de pipelines de dados e de uma API de analytics., Data literacy e people analytics.]
+    tech: [Python, R, Node.js, PHP, MongoDB, Postgres, Redis, Neo4j, Elasticsearch, Kafka, AWS, OpenShift, Metabase, Grafana]
+
+earlier_career:
+  en: >-
+    2005–2019: software engineering and entrepreneurship in education technology.
+    Co-founded Mídias Educativas (2008–2019; educational products, serious games
+    and data analytics) and Mídias Criativas (augmented-reality storybooks for
+    children), after building rich internet applications and educational game
+    engines at Positivo Tecnologia, Politec and S.C.A Technology.
+  pt: >-
+    2005–2019: engenharia de software e empreendedorismo em tecnologia educacional.
+    Cofundador da Mídias Educativas (2008–2019; produtos educacionais, jogos sérios
+    e projetos de análise de dados) e da Mídias Criativas (livros com realidade
+    aumentada para crianças), depois de desenvolver aplicações ricas para internet
+    e engines de jogos educacionais na Positivo Tecnologia, Politec e S.C.A Technology.
+
+education:
+  - school: Universidade de Pernambuco
+    degree: {en: "PhD special student, Computer Engineering (Pattern Recognition, NLP, Time Series)", pt: "Aluno especial de doutorado, Engenharia da Computação (Reconhecimento de Padrões, PLN, Séries Temporais)"}
+    years: "2025–2026"
+  - school: Universidade de Pernambuco
+    degree: {en: "MSc, Computer Engineering", pt: "Mestrado, Engenharia da Computação"}
+    years: "2011–2013"
+  - school: Johns Hopkins Bloomberg School of Public Health
+    degree: {en: Data Science Specialization, pt: Especialização em Data Science}
+    years: "2015–2016"
+
+certifications:
+  - Astronomer Certification for Apache Airflow Fundamentals
+  - "Dremio D101: Dremio Fundamentals"
+  - Reproducible Research
+  - Como Criar uma Solução Completa de Data Science
+  - Adobe Certified Professional
+
+awards:
+  - {en: "2nd place, II Integrated Apps.Edu Contest, CBIE 2016", pt: "2º lugar, II Concurso Integrado Apps.Edu, CBIE 2016"}
+  - {en: "2nd place, I Integrated Apps.Edu Contest, CBIE 2015", pt: "2º lugar, I Concurso Integrado Apps.Edu, CBIE 2015"}
+  - {en: "Best company of 2014, Education category — PME Exame", pt: "Melhor empresa de 2014 na categoria Educação — revista PME Exame"}
+  - {en: "Thesis & Dissertation Contest in Computers in Education (CTD-IE), CBIE 2014", pt: "Concurso de Teses, Dissertações e TCC em Informática na Educação (CTD-IE), CBIE 2014"}
+  - {en: "Best poster, XXIV Brazilian Symposium on Computers in Education, CBIE 2013", pt: "Melhor pôster, XXIV Simpósio Brasileiro de Informática na Educação, CBIE 2013"}
+
+publications:
+  - Early detection of students at risk of failure from a small dataset
+  - Avaliação de habilidade cognitiva em sistemas adaptativos utilizando lógica fuzzy e teoria da resposta ao item
+  - Aplicação de otimização por enxame de partículas na estimativa de parâmetros de itens calibrados com teoria da resposta ao item
+  - Sistema hipermídia adaptativo educacional baseado em estilos de aprendizagem
+  - "Smartphones: de vilão a herói. Proposta de ferramenta de baixo custo para aprendizado ativo em sala de aula"
+
+languages:
+  - {name: {en: Portuguese, pt: Português}, level: {en: Native, pt: Nativo}}
+  - {name: {en: English, pt: Inglês}, level: {en: Professional working, pt: Profissional}}

@@ -1,2 +1,4 @@
 {{- /* Bilingual field: plain string, or map keyed by language code. */ -}}
-{{- if reflect.IsMap .v }}{{ return index .v .lang }}{{ else }}{{ return .v }}{{ end -}}
+{{- $v := .v }}
+{{- if reflect.IsMap $v }}{{ $v = index $v .lang }}{{ end }}
+{{- return $v -}}
