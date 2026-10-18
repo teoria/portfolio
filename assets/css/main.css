@@ -36,6 +36,10 @@ main.wrap { padding-top: 28px; padding-bottom: 48px; }
 @media (max-width: 760px) {
   .home { grid-template-columns: 1fr; }
   .sidebar { position: static; }
+  /* Compact header on phones: posts are the proof, keep them near the top. */
+  .sidebar .plain, .sidebar .tags, .sidebar .label { display: none; }
+  .sidebar .avatar { width: 56px; height: 56px; }
+  .sidebar .button { display: inline-block; margin-top: 12px; }
 }
 
 .cv h1 { margin: 0; font-size: 28px; }

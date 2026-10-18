@@ -10,19 +10,19 @@ location:
 summary:
   en: >-
     Data engineer with 20 years in software and 10+ years building data platforms,
-    pipelines and machine learning systems. I design data integration, lakehouse
-    and MLOps solutions that teams trust for decision making, with a focus on
+    pipelines and machine learning systems. I design data integration, data lake
+    and MLOps solutions that support decision making, with a focus on
     data quality and governance. Former Staff Data Engineer and tech lead;
     MSc in Computational Intelligence (UPE) and Data Science specialization
     (Johns Hopkins).
   pt: >-
     Engenheiro de dados com 20 anos em software e mais de 10 anos construindo
     plataformas de dados, pipelines e sistemas de machine learning. Projeto
-    soluções de integração de dados, lakehouse e MLOps em que os times confiam
-    para tomar decisões, com foco em qualidade e governança de dados. Já atuei
+    soluções de integração de dados, data lake e MLOps que apoiam a tomada de
+    decisão, com foco em qualidade e governança de dados. Já atuei
     como Staff Data Engineer e tech lead; mestre em Computação Inteligente (UPE)
     e especialista em Data Science (Johns Hopkins).
-stack: [Airflow, dbt, Spark, Kafka, Athena, Redshift, Snowflake, Postgres, Python, AWS, Kubernetes, MLOps]
+stack: [Airflow, dbt, Spark, Kafka, Athena, Snowflake, Postgres, Python, AWS, Kubernetes, MLOps]
 
 experience:
   - company: Filterbuy
@@ -44,11 +44,11 @@ experience:
     end: "2023-03"
     bullets:
       en:
-        - "Core data engineering and team technical development."
+        - "Core engineering and team technical development."
         - "Architected data pipelines."
         - "MLOps, data quality and data governance."
       pt:
-        - "Engenharia de dados core e desenvolvimento técnico do time."
+        - "Engenharia core e desenvolvimento técnico do time."
         - "Arquitetura de pipelines de dados."
         - "MLOps, qualidade e governança de dados."
     tech: [Kubernetes, Kafka, Spark, dbt, Redash, Python, Scala]

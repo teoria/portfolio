@@ -19,6 +19,7 @@ has cv/index.html     'Universidade de Pernambuco'
 has index.html        'Download CV'
 has index.html        'Rodrigo Carneiro'
 lacks . 'gmail|midiaseducativas|teoria@'
+lacks cv/index.html   'Redshift|lakehouse|teams trust|Core data engineering'
 has cv/index.html     '<li>MLOps, data quality and data governance.</li>'
 
 # Posts (drafts are fixtures)
@@ -41,6 +42,9 @@ has experiments/index.html    'gohugoio/hugo'
 has experiments/index.html    'class="card repo-card'
 has pt/experiments/index.html 'Experimentos'
 
+# Phone: compact sidebar so posts sit near the top
+awk '/@media \(max-width: 760px\)/{m=1} m&&/\.sidebar \.plain/{f=1} /^}/{m=0} END{exit !f}' assets/css/main.css || { echo "FAIL: sidebar not compact on phones"; exit 1; }
+
 # Production build + CV PDFs
 GITHUB_FETCH=false bash scripts/build.sh >/dev/null
 pdf() { pdftotext "public/$1" - 2>/dev/null; }
@@ -48,4 +52,7 @@ pdf cv.pdf    | grep -q 'Serasa Experian'   || { echo "FAIL: cv.pdf content"; ex
 pdf pt/cv.pdf | grep -q 'Carreira anterior' || { echo "FAIL: pt/cv.pdf content"; exit 1; }
 ! pdf cv.pdf  | grep -q 'Experiments'       || { echo "FAIL: nav printed in cv.pdf"; exit 1; }
 ! pdf cv.pdf  | grep -qiE 'gmail|midiaseducativas' || { echo "FAIL: private contact in cv.pdf"; exit 1; }
+
+# CI deploys every push: placeholders must never ship
+if [ -n "${CI:-}" ]; then lacks . 'github\.com/OWNER|gohugoio/hugo'; fi
 echo OK
