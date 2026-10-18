@@ -30,10 +30,11 @@ has posts/only-en/index.html    'Only in English'
 has posts/only-en/index.html    'href="?/pt/"?'
 has posts/index.html            'posts/example/'
 
-# Empty state: no drafts
+# Real posts, no drafts
 build
-has index.html    'No posts yet'
-has pt/index.html 'Nenhuma publicação ainda'
+has index.html    'posts/data-contracts-ai/'
+has pt/index.html 'pt/posts/data-contracts-ai/'
+lacks index.html  'posts/example/'
 
 # Repos, offline (API unavailable must not break the build)
 GITHUB_FETCH=false build
