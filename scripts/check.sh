@@ -35,6 +35,9 @@ build
 has index.html    'posts/data-contracts-ai/'
 has pt/index.html 'pt/posts/data-contracts-ai/'
 lacks index.html  'posts/example/'
+has posts/duckdb-threads/index.html    'Excerpt. The full post is on LinkedIn'
+has pt/posts/duckdb-threads/index.html 'Trecho. O post completo'
+has posts/index.html 'posts/dbt-docs-in-airflow-cosmos/'
 
 # Repos, offline (API unavailable must not break the build)
 GITHUB_FETCH=false build
