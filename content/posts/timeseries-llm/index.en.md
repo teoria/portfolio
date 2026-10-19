@@ -1,6 +1,7 @@
 ---
 title: "Time series + LLM"
 date: 2026-10-13
+linkedin: https://www.linkedin.com/feed/update/urn:li:activity:7515806146931273728/
 teaser: I tested Chronos-2, which forecasts time series by treating quantized values as tokens for a language model.
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Séries temporais + LLM"
 date: 2026-10-13
+linkedin: https://www.linkedin.com/feed/update/urn:li:activity:7515806146931273728/
 teaser: Testei o Chronos-2, que prevê séries temporais tratando valores quantizados como tokens de um modelo de linguagem.
 ---
 
