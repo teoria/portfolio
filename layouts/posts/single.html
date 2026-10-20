@@ -3,6 +3,13 @@
   <h1>{{ .Title }}</h1>
   <p class="date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time></p>
   {{ .Content }}
+  {{- with .Resources.ByType "image" }}
+  <div class="post-images">
+    {{- range $i, $img := . }}
+    <a href="{{ $img.RelPermalink }}"><img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" loading="lazy" alt="{{ $.Title }} — {{ add $i 1 }}"></a>
+    {{- end }}
+  </div>
+  {{- end }}
   {{- if .Params.excerpt }}<p class="muted"><em>{{ i18n "excerpt_note" }}</em></p>{{ end }}
   {{- with .Params.linkedin }}
   <p><a class="button" href="{{ . }}">{{ i18n "read_on_linkedin" }}</a></p>

@@ -73,3 +73,6 @@ main.wrap { padding-top: 28px; padding-bottom: 48px; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
 .repo-card h3 { margin: 0 0 6px; font-size: 16px; word-break: break-word; }
 .repo-card p { margin: 0 0 8px; }
+
+.post-images { display: grid; gap: 12px; margin: 16px 0; }
+.post-images img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }

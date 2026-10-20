@@ -38,6 +38,8 @@ lacks index.html  'posts/example/'
 has posts/duckdb-threads/index.html    'Excerpt. The full post is on LinkedIn'
 has pt/posts/duckdb-threads/index.html 'Trecho. O post completo'
 has posts/index.html 'posts/dbt-docs-in-airflow-cosmos/'
+has posts/airflow-embedash/index.html    'class="post-images'
+has pt/posts/airflow-embedash/index.html 'airflow-embedash/image-3.jpg'
 
 # Repos, offline (API unavailable must not break the build)
 GITHUB_FETCH=false build
