@@ -30,9 +30,13 @@ jobs:
         run: bash scripts/check.sh
         env:
           CHROME: ${{ steps.chrome.outputs.chrome-path }}
+      - uses: actions/configure-pages@v5
+        id: pages
       - name: Build
         run: bash scripts/build.sh
         env:
+          # Follows the Pages setting: custom domain if set, else teoria.github.io/portfolio
+          HUGO_BASEURL: ${{ steps.pages.outputs.base_url }}/
           CHROME: ${{ steps.chrome.outputs.chrome-path }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/upload-pages-artifact@v3

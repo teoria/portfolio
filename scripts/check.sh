@@ -59,6 +59,14 @@ pdf pt/cv.pdf | grep -q 'Carreira anterior' || { echo "FAIL: pt/cv.pdf content";
 ! pdf cv.pdf  | grep -q 'Experiments'       || { echo "FAIL: nav printed in cv.pdf"; exit 1; }
 ! pdf cv.pdf  | grep -qiE 'gmail|midiaseducativas' || { echo "FAIL: private contact in cv.pdf"; exit 1; }
 
+# Served under a sub-path (github.io preview): links and the PDFs must follow baseURL
+HUGO_BASEURL=https://teoria.github.io/portfolio/ GITHUB_FETCH=false bash scripts/build.sh >/dev/null
+has index.html    'href="?/portfolio/posts/'
+has index.html    'href="?/portfolio/cv.pdf'
+lacks index.html  'href="?/posts/'
+pdf cv.pdf | grep -q 'Serasa Experian' || { echo "FAIL: cv.pdf under sub-path"; exit 1; }
+! pdf cv.pdf | grep -q 'Experiments' || { echo "FAIL: cv.pdf unstyled under sub-path (nav printed)"; exit 1; }
+
 # CI deploys every push: placeholders must never ship
 if [ -n "${CI:-}" ]; then lacks . 'github\.com/OWNER|gohugoio/hugo'; fi
 echo OK
